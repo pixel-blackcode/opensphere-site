@@ -141,6 +141,10 @@ body.open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .c-big{grid-column:span 4;grid-row:span 2}
 .c-md{grid-column:span 2}
 .c-3{grid-column:span 3}
+.c-full{grid-column:span 6}
+.c-soon{border:1.5px dashed var(--teal);background:linear-gradient(135deg,#fff 0%,#eef8fb 100%)}
+.soon{align-self:flex-start;display:inline-flex;align-items:center;gap:7px;background:#e6f7f7;color:#0c7a7e;border-radius:999px;padding:4px 12px;font-size:12.5px;font-weight:700}
+.soon::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--teal)}
 .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,#e5f0fd,#e3f7f7);color:var(--royal)}
 .mini{margin-top:auto;padding-top:14px}
 /* browser mini */
@@ -252,7 +256,7 @@ footer{padding:56px 0 40px;font-size:15px;color:var(--slate)}
   .burger{display:block}
   .hero-grid,.about{grid-template-columns:1fr}
   .stage{height:430px;max-width:520px;margin:0 auto;width:100%}
-  .c-big,.c-md,.c-3{grid-column:span 6}
+  .c-big,.c-md,.c-3,.c-full{grid-column:span 6}
   .c-big{grid-row:auto}
   .works,.prices,.more{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr 1fr}
@@ -417,6 +421,13 @@ footer{padding:56px 0 40px;font-size:15px;color:var(--slate)}
         <h3>Caisses et terminaux de vente (POS)</h3>
         <p>Pour bars, restaurants, boutiques : encaissement rapide, tickets, suivi des serveurs et des stocks, rapport de fin de journée.</p>
       </article>
+      <article class="card c-full c-soon rv">
+        <span class="soon">Bientôt disponible</span>
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 7V3M9 12h.01M15 12h.01M9 16h6"/></svg></div>
+        <h3>Déploiement d'agents IA</h3>
+        <p>Un assistant intelligent qui travaille pour vous 24 h/24 : il répond à vos clients sur WhatsApp, prend les commandes et les réservations, renseigne vos prix et automatise les tâches répétitives de votre équipe.</p>
+        <div class="tags"><span>Agent WhatsApp</span><span>Assistant interne</span><span>Automatisations</span></div>
+      </article>
     </div>
   </div>
 </section>
@@ -517,7 +528,7 @@ footer{padding:56px 0 40px;font-size:15px;color:var(--slate)}
     <div class="portrait rv"><div><div class="init">JMC</div>Photo de Joël<br>à ajouter</div></div>
     <div class="rv">
       <div class="eyebrow">À propos</div>
-      <h2>Joël Mabika Chingumba,<br>fondateur d'OpenSphere.</h2>
+      <h2>Joël Mabika Tshingomba,<br>fondateur d'OpenSphere.</h2>
       <p class="lead" style="margin-top:18px">Licencié en informatique, option réseaux, j'ai créé OpenSphere pour rendre le numérique accessible aux entreprises congolaises. J'allie une formation technique solide aux outils les plus modernes, dont l'intelligence artificielle, pour livrer plus vite et à des prix justes.</p>
       <p class="lead" style="margin-top:14px">Basé à Kinshasa, je travaille avec des clients partout en RDC.</p>
       <div class="why">
