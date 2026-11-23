@@ -145,7 +145,8 @@ body.open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .c-soon{border:1.5px dashed var(--teal);background:linear-gradient(135deg,#fff 0%,#eef8fb 100%)}
 .soon{align-self:flex-start;display:inline-flex;align-items:center;gap:7px;background:#e6f7f7;color:#0c7a7e;border-radius:999px;padding:4px 12px;font-size:12.5px;font-weight:700}
 .soon::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--teal)}
-.ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,#e5f0fd,#e3f7f7);color:var(--royal)}
+.ic{display:flex;color:var(--royal);margin-bottom:2px}
+.ic svg{width:28px;height:28px;stroke-width:1.75}
 .mini{margin-top:auto;padding-top:14px}
 /* browser mini */
 .bw{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
@@ -187,9 +188,11 @@ body.open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .note{margin-top:22px;font-size:14px;color:#8fa6c3}
 
 /* steps */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative;padding-top:32px}
+.steps::before{content:"";position:absolute;top:9px;left:26px;right:26px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--royal),var(--teal))}
 .step{padding:26px;border-radius:var(--r);background:#fff;box-shadow:var(--sh);position:relative}
-.step::before{counter-increment:s;content:"0" counter(s);font-weight:800;font-size:14px;color:#fff;background:linear-gradient(135deg,var(--royal),var(--teal));width:38px;height:38px;border-radius:10px;display:grid;place-items:center;margin-bottom:16px}
+.step::before{content:"";position:absolute;top:-30px;left:26px;width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--teal);box-sizing:border-box}
+.step:first-child::before{border-color:var(--royal)}
 .step h3{font-size:19px;margin-bottom:6px}
 .step p{color:var(--slate);font-size:15px}
 
@@ -259,7 +262,9 @@ footer{padding:56px 0 40px;font-size:15px;color:var(--slate)}
   .c-big,.c-md,.c-3,.c-full{grid-column:span 6}
   .c-big{grid-row:auto}
   .works,.prices,.more{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr;padding-top:0}
+  .steps::before,.step::before{display:none}
+  .step{border-top:3px solid var(--teal)}
   .foot{grid-template-columns:1fr}
   .portrait{max-width:340px}
 }
